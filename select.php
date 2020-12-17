@@ -76,8 +76,8 @@
 	 		<td><?php echo $result['name']?></td>
 	        <td><?php echo $result['college']?></td>
 	 		<td><?php echo $result['gender']?></td>
-	 		<td><?php echo $result['education']?></td>
-	 		<td><img src="upload/<?php echo $result['file']?>" width="100" height="100">
+	 		<td><?php echo $result['file']?></td>
+	 		<td><img src="<?php echo $result['file']?>" width="100" height="100">
 
 	 			<br>
 	 			<form method="post" enctype="multipart/form-data">

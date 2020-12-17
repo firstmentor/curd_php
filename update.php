@@ -1,7 +1,7 @@
 <?php
 include ('dbcon.php');
 
-if (isset($_GET['id']))
+if (isset($_GET['id']))2
 {
 echo$id =$_GET['id'];
 $query ="select * From student where id=$id";

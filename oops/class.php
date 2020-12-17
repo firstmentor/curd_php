@@ -1,23 +1,23 @@
 <?php
 
-/**
- * 
- */
-class mpct /**extends AnotherClass */
+
+class mi /**extends AnotherClass */
 {
 
-	public $name ="Amit";
-	public $age  =12;
+   public $name='vikas';
+   public $age=30;
 
 
+   public function add()
+   {
+   	  echo "phone";
+   }
 	
-	 public function hello()
-	{
-		echo "hello mpct";
-	}
+
 }
 
-$a=new mpct();
+$data = new mi();
 
-echo $a->name;
-$a->hello();
+echo $data->name; 
+echo $data->age; 
+

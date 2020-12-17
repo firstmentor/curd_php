@@ -1,0 +1,104 @@
+html>
+
+<head>
+    <title>Student Registration LNCTU</title>
+    <style>
+        h2 {
+            font-family: Sans-serif;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: bold;
+            color: green;
+            text-align: center;
+            text-decoration: underline
+        }
+        
+        table {}
+        
+        table.inner {
+            border: 10px
+        }
+        
+        input[type=text],
+        input[type=email],
+        input[type=number] {
+            width: 50%;
+            padding: 6px 12px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+        
+        input[type=submit],
+        input[type=reset] {
+            width: 15%;
+            padding: 8px 12px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>BUSPASS Registration</h3>
+        <table align="center" cellpadding="10">
+
+            <tr>
+                <td>First Name</td>
+                <td><input type="text" name="FirstName" maxlength="50" placeholder="First Name" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>Last Name</td>
+                <td><input type="text" name="LastName" maxlength="50" placeholder="Last Name" />
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+
+            </tr>
+
+            <tr>
+                <td>Contact Detail</td>
+                <td>
+                    <input type="text" name="MobileNumber" maxlength="10" placeholder="Mobile Number" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>Gender</td>
+                <td>
+                    <input type="radio" name="Gender" value="Male" /> Male
+                    <input type="radio" name="Gender" value="Female" /> Female
+                    <input type="radio" name="Gender" value="other" /> other
+                </td>
+            </tr>
+
+            <tr>
+                <td>Address<br /><br /><br /></td>
+                <td><textarea name="Address" rows="10" cols="50"></textarea></td>
+            </tr>
+
+            <tr>
+                <td>Payment Mode</td>
+                <td>
+                    <input type="radio" name="Payment Mode" value="UPI" /> UPI
+                    <input type="radio" name="Payment Mode" value="NETBANKING" /> NETBANKING
+                    <input type="radio" name="Payment Mode" value="DEBIT/CREDIT" /> DEBIT/CREDIT
+
+                </td>
+            </tr>
+
+
+            <tr>
+                <td colspan="2" align="center">
+                    <a href="aaaa.html"><input type="submit" value="Submit"></a>
+                    <input type="reset" value="Reset">
+                </td>
+            </tr>
+        </table>
+        </form>
+</body>
+
+</html>

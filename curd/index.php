@@ -12,6 +12,7 @@ $query =mysqli_query($con,$q);
 
 }
 ?>
+<?php include './header.php'?>
 
 
 <!DOCTYPE html>

@@ -1,7 +1,7 @@
 <?php
  session_start();
 
- if($_SESSION["username"]==true)
+if($_SESSION["username"]==true)
  {
  	echo "Welcome   " . $_SESSION['username'];
 
@@ -14,7 +14,5 @@
 
  ?>
 
-
-
- <a href="logout.php">Logout</a>
+<a href="logout.php">Logout</a>
 

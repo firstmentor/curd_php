@@ -1,40 +1,28 @@
 
 <?php
-error_reporting(0);
+
 include('dbcon.php');
 
-  if(isset($_POST['submit'])){
+  if(isset($_POST['a'])){
 
-    $name= $_REQUEST['name'];
-    $college =$_REQUEST['college'];
-    $gender =$_REQUEST['gender'];
-    echo$education =$_REQUEST['education'];
-
-
+    echo$name= $_POST['name'];
+    echo$college =$_POST['college'];
+    echo$gender =$_POST['gender'];
+    echo$education =$_POST['education'];
 
     $b=implode(",",$education);
 
-    //echo $b;
+       
 
 
+    $filename = $_FILES['file'] ['name'];
+    $tempname = $_FILES['file'] ['tmp_name'];
 
+    $file = "upload/" .$filename;
 
-
-
-    $file=$_FILES["file"]["name"];
-    //echo $file;
-    $tmp_name =$_FILES["file"]["tmp_name"];
-    $path ="upload/".$file;
-    //only jpg,png,upload
-
-    $file1 =explode(".", $file); //image.jpg Arrays
-    //echo $file1[1];   //jpg
-    $ext =$file1[1];
-    $allowed=array("jpg","png","gif");
-    if(in_array($ext, $allowed))
-    {	
-
-    move_uploaded_file($tmp_name,$path);
+    move_uploaded_file($tempname, $file);
+   echo "<img src='$file' height='100' width='100' />";
+    
 
 
    
@@ -46,18 +34,10 @@ include('dbcon.php');
   $query =mysqli_query($con, $q);
   if( $query)
   {
-  	echo "okk";
-  	}
+  	header('location:form.php');
+  }
   // header('location:select.php');
 }
-
-
-
-}
-
-
-
-
 
 ?>
 
@@ -67,9 +47,12 @@ include('dbcon.php');
 <head>
 	<title></title>
 </head>
+
 <body>
 	<form method="post" enctype="multipart/form-data">
-		Name:<input type="text" name="name" >
+    
+		1Name:<input type="text" name="name" >
+   
 		<br>
 		<br>
 		College:<select name="college">
@@ -87,18 +70,19 @@ include('dbcon.php');
 	           <input type="radio" name="gender" value="other">other
                <br>
                <br>
-        Education:<input type="checkbox" name="education[]" value="mca">MCA
+Education:<input type="checkbox" name="education[]" value="mca">MCA
         <input type="checkbox" name="education[]" value="ca">CA      
         <input type="checkbox" name="education[]" value="ma">MA
         <input type="checkbox" name="education[]" value="bba">BBA
 
         <br>
         <br>
-        File Upload:<input type="file" name="file">
+        
 
-        <br>
-        <br>
-		<input type="submit" name="submit" value="Submit">
+        
+
+        
+		<input type="submit" name="a" value="Submit">
 		
 
 

@@ -1,11 +1,8 @@
 <?php
 
-/**
- * 
- */
 class mpct 
 {
-	public $name = "amit"
+	public $name = "amit";
 	public $age  = 20;
 	public $email = "amitsinghrajawat225@gmail.com";
 
@@ -15,6 +12,9 @@ class mpct
 		echo $this->name .$this->email.$this->age;
 	}
 }
+
+
+
 
 $hello =new mpct;
 $hello->user();

@@ -4,19 +4,41 @@
 	<title></title>
 </head>
 <body>
-	<form method="post">
+
+	<table>
+		<tr>
+			<th>Id</th>
+			<th>Username</th>
+			<th>Password</th>
+			<th>Action</th>
+	    </tr>
+
+
+	    <?php
+	      include "dbcon.php";
+	      $data="select * from student";
+	      $result=mysqli_query($con, $data);
+	     while($a=mysqli_fetch_array($result))
+	     {
+	     ?>
+	    <tr>
+	       <td><?php echo$a['id'];?> </td>
+	       <td><?php echo$a['username'];?></td>
+	       <td><?php echo$a['password'];?></td>
+	       <td>
+	       	 <a href="view.php?id=<?php echo$a['id'];?>">View</a>
+	       	 <a href="edit.php?id=<?php echo$a['id'];?>">Edit</a>
+	       	 <a href="delete.php?id=<?php echo$a['id'];?>">Delete</a>
+	       </td>   	 
+	    </tr> 
+	    <?php
+	    }
+	    ?>  		
 		
-    College:<select name="college">
-			<option value="select">Select</option>
-			<option value="rjit">RJIT</option>
-			<option value="mpct">mpct</option>
-			<option value="itm">itm</option>
-			<option value="jaincollege">jain college</option>
-		    </select>
-			<br>
-			<br>
-    <input type="submit" name="submit" value="Submit">			
-	</form>
+
+
+
+	</table>
 
 </body>
 </html>
