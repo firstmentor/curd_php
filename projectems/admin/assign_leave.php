@@ -49,7 +49,8 @@ session_start();
 				</div>
 			</div>
 			<div class="col-md-9">
-				<a href="alltask.php" class="btn btn-info">All Leave</a>
+				<a href="allleave.php" class="btn btn-info">All Leave</a>
+				<a href="all_apply_leave.php" class="btn btn-danger"> All Apply  Leave</a>
 					<br>
 					<br>
 				<div class="form-group">
